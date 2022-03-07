@@ -1,5 +1,13 @@
-import "./App.css";
+import React, { useState } from "react";
 
-function App() {}
+export default function App() {
+  const [messages, setMessages] = useState(["a", "b"]);
 
-export default App;
+  return (
+    <div>
+      {messages.length > 0 && (
+        <h1>You have {messages.length} unread messages!</h1>
+      )}
+    </div>
+  );
+}
